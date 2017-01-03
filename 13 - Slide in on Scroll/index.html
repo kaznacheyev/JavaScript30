@@ -56,10 +56,10 @@
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
       };
-    }
+    };
 
     const sliderImages = document.querySelectorAll('.slide-in');
-
+    
     function checkSlide(e) {
       sliderImages.forEach(sliderImage => {
         // half way through the image
@@ -75,9 +75,7 @@
         }
       });
     }
-
     window.addEventListener('scroll', debounce(checkSlide));
-
   </script>
 
   <style>
@@ -94,11 +92,9 @@
     *, *:before, *:after {
       box-sizing: inherit;
     }
-
     h1 {
       margin-top: 0;
     }
-
     .site-wrap {
       max-width: 700px;
       margin: 100px auto;
@@ -106,34 +102,28 @@
       padding:40px;
       text-align: justify;
     }
-
     .align-left {
       float:left;
       margin-right:20px;
     }
-
     .align-right {
       float:right;
       margin-left:20px;
     }
-
     .slide-in {
       opacity:0;
       transition:all .5s;
     }
-
     .align-left.slide-in {
       transform:translateX(-30%) scale(0.95);
     }
     .align-right.slide-in {
       transform:translateX(30%) scale(0.95);
     }
-
     .slide-in.active {
       opacity:1;
       transform:translateX(0%) scale(1);
     }
-
   </style>
 
 </body>
